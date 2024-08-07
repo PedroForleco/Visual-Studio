@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Arquivo___Projeto03
+namespace Arquivo_Projeto05__OBrasil_
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
@@ -14,31 +14,69 @@ namespace Arquivo___Projeto03
 
         }
 
-        protected void btnAnalisar_Click(object sender, EventArgs e)
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            int numero1 = Convert.ToInt32(txtN1.Text);
-            int numero2 = Convert.ToInt32(txtN2.Text);
 
-            if (numero1 > numero2)
-            {
-                lblResultado.Text = "O Primeiro Número é Maior";
-            }
-            else if (numero1 == numero2)
-            {
-                lblResultado.Text = "Os Dois Números são Iguais";
-            }
-            else if (numero1 < numero2)
-            {
-                lblResultado.Text = "O Segundo Número é Maior";
-            }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void dropRegioes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtN1.Text = "";
-            txtN2.Text = "";
-            lblResultado.Text = "";
+            string regioes = dropRegioes.SelectedValue;
+
+            if (regioes == "[ESCOLHA]")
+            {
+                painelNorte.Visible = false;
+                painelNordeste.Visible = false;
+                painelCentroOeste.Visible = false;
+                painelSudeste.Visible = false;
+                painelSul.Visible = false;
+                imgRegioes.ImageUrl = "~/Imagens/paginabranco.png";
+            }
+            else if (regioes == "Norte")
+            {
+                painelNorte.Visible = true;
+                painelNordeste.Visible = false;
+                painelCentroOeste.Visible = false;
+                painelSudeste.Visible = false;
+                painelSul.Visible = false;
+                imgRegioes.ImageUrl = "~/Imagens/regiãonorte.png";
+            }
+            else if (regioes == "Nordeste")
+            {
+                painelNorte.Visible = false;
+                painelNordeste.Visible = true;
+                painelCentroOeste.Visible = false;
+                painelSudeste.Visible = false;
+                painelSul.Visible = false;
+                imgRegioes.ImageUrl = "~/Imagens/regiãonordeste.png";
+            }
+            else if (regioes == "Centro-Oeste")
+            {
+                painelNorte.Visible = false;
+                painelNordeste.Visible = false;
+                painelCentroOeste.Visible = true;
+                painelSudeste.Visible = false;
+                painelSul.Visible = false;
+                imgRegioes.ImageUrl = "~/Imagens/regiãocentrooeste.png";
+            }
+            else if (regioes == "Sudeste")
+            {
+                painelNorte.Visible = false;
+                painelNordeste.Visible = false;
+                painelCentroOeste.Visible = false;
+                painelSudeste.Visible = true;
+                painelSul.Visible = false;
+                imgRegioes.ImageUrl = "~/Imagens/regiãosudeste.png";
+            }
+            else if (regioes == "Sul")
+            {
+                painelNorte.Visible = false;
+                painelNordeste.Visible = false;
+                painelCentroOeste.Visible = false;
+                painelSudeste.Visible = false;
+                painelSul.Visible = true;
+                imgRegioes.ImageUrl = "~/Imagens/regiãosul.png";
+            }
         }
     }
 }
-
