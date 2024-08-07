@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Arquivo_Projeto05__OBrasil_
+namespace Projeto02
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
@@ -14,68 +14,60 @@ namespace Arquivo_Projeto05__OBrasil_
 
         }
 
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void DropDownList1_SelectedIndexChanged2(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            txtNum1.Text = "";
+            txtNum2.Text = "";
+            lblResultado.Text = "";
+        }
+
         protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        protected void dropRegioes_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnExecutar_Click(object sender, EventArgs e)
         {
-            string regioes = dropRegioes.SelectedValue;
+            if (dropOperacao.SelectedValue == "+")
+            {
+                int numero1 = Convert.ToInt32(txtNum1.Text);
+                int numero2 = Convert.ToInt32(txtNum2.Text);
+                int soma = numero1 + numero2;
+                lblResultado.Text = soma.ToString();
+            }
 
-            if (regioes == "[ESCOLHA]")
+            else if (dropOperacao.SelectedValue == "-")
             {
-                painelNorte.Visible = false;
-                painelNordeste.Visible = false;
-                painelCentroOeste.Visible = false;
-                painelSudeste.Visible = false;
-                painelSul.Visible = false;
-                imgRegioes.ImageUrl = "~/Imagens/paginabranco.png";
+                int numero1 = Convert.ToInt32(txtNum1.Text);
+                int numero2 = Convert.ToInt32(txtNum2.Text);
+                int soma = numero1 - numero2;
+                lblResultado.Text = soma.ToString();
             }
-            else if (regioes == "Norte")
+
+            else if (dropOperacao.SelectedValue == "*")
             {
-                painelNorte.Visible = true;
-                painelNordeste.Visible = false;
-                painelCentroOeste.Visible = false;
-                painelSudeste.Visible = false;
-                painelSul.Visible = false;
-                imgRegioes.ImageUrl = "~/Imagens/regiãonorte.png";
+                int numero1 = Convert.ToInt32(txtNum1.Text);
+                int numero2 = Convert.ToInt32(txtNum2.Text);
+                int soma = numero1 * numero2;
+                lblResultado.Text = soma.ToString();
             }
-            else if (regioes == "Nordeste")
+
+            else if (dropOperacao.SelectedValue == "/")
             {
-                painelNorte.Visible = false;
-                painelNordeste.Visible = true;
-                painelCentroOeste.Visible = false;
-                painelSudeste.Visible = false;
-                painelSul.Visible = false;
-                imgRegioes.ImageUrl = "~/Imagens/regiãonordeste.png";
-            }
-            else if (regioes == "Centro-Oeste")
-            {
-                painelNorte.Visible = false;
-                painelNordeste.Visible = false;
-                painelCentroOeste.Visible = true;
-                painelSudeste.Visible = false;
-                painelSul.Visible = false;
-                imgRegioes.ImageUrl = "~/Imagens/regiãocentrooeste.png";
-            }
-            else if (regioes == "Sudeste")
-            {
-                painelNorte.Visible = false;
-                painelNordeste.Visible = false;
-                painelCentroOeste.Visible = false;
-                painelSudeste.Visible = true;
-                painelSul.Visible = false;
-                imgRegioes.ImageUrl = "~/Imagens/regiãosudeste.png";
-            }
-            else if (regioes == "Sul")
-            {
-                painelNorte.Visible = false;
-                painelNordeste.Visible = false;
-                painelCentroOeste.Visible = false;
-                painelSudeste.Visible = false;
-                painelSul.Visible = true;
-                imgRegioes.ImageUrl = "~/Imagens/regiãosul.png";
+                int numero1 = Convert.ToInt32(txtNum1.Text);
+                int numero2 = Convert.ToInt32(txtNum2.Text);
+                int soma = numero1 / numero2;
+                lblResultado.Text = soma.ToString();
             }
         }
     }
