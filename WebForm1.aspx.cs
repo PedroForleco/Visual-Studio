@@ -5,86 +5,77 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Arquivo___Projeto04__TimesDeFutebol
+namespace Arquivo_Projeto05__OBrasil_
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        private const string V = "corinthians";
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnExcutar_Click(object sender, EventArgs e)
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            string times = dropTimes.SelectedValue.ToString();
 
-            if (times == "[ESCOLHA]")
-            {
-                lblResultado.Text = "";
-                imgTimes.ImageUrl = "imagens/paginabranco.png";
-            }
-            else if (times == "Corinthians")
-            {
-                lblResultado.Text = "15° Colocado no Brasileirão";
-                imgTimes.ImageUrl = "imagens/corinthians.jfif";
-            }
-            else if (times == "Criciúma")
-            {
-                lblResultado.Text = "12° Colocado no Brasileirão";
-                imgTimes.ImageUrl = "imagens/criciúma.jfif";
-            }
-            else if (times == "Bahia")
-            {
-                lblResultado.Text = "7° Colocado no Brasileirão";
-                imgTimes.ImageUrl = "imagens/bahia.jfif";
-            }
-            else if (times == "Palmeiras")
-            {
-                lblResultado.Text = "3° Colocado no Brasileirão";
-                imgTimes.ImageUrl = "imagens/palmeiras.png";
-            }
-            else if (times == "Botafogo")
-            {
-                lblResultado.Text = "2° Colocado no Brasileirão";
-                imgTimes.ImageUrl = "imagens/botafogo.jfif";
-            }
         }
 
-        protected void dropTimes_SelectedIndexChanged(object sender, EventArgs e)
+        protected void dropRegioes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string times = dropTimes.SelectedValue.ToString();
+            string regioes = dropRegioes.SelectedValue;
 
-            if (times == "[ESCOLHA]")
+            if (regioes == "[ESCOLHA]")
             {
-                lblResultado.Text = "";
-                imgTimes.ImageUrl = "imagens/paginabranco.png";
+                painelNorte.Visible = false;
+                painelNordeste.Visible = false;
+                painelCentroOeste.Visible = false;
+                painelSudeste.Visible = false;
+                painelSul.Visible = false;
+                imgRegioes.ImageUrl = "~/Imagens/paginabranco.png";
             }
-            else if (times == "Corinthians")
+            else if (regioes == "Norte")
             {
-                lblResultado.Text = "15° Colocado no Brasileirão";
-                imgTimes.ImageUrl = "imagens/corinthians.jfif";
+                painelNorte.Visible = true;
+                painelNordeste.Visible = false;
+                painelCentroOeste.Visible = false;
+                painelSudeste.Visible = false;
+                painelSul.Visible = false;
+                imgRegioes.ImageUrl = "~/Imagens/regiãonorte.png";
             }
-            else if (times == "Criciúma")
+            else if (regioes == "Nordeste")
             {
-                lblResultado.Text = "12° Colocado no Brasileirão";
-                imgTimes.ImageUrl = "imagens/criciúma.jfif";
+                painelNorte.Visible = false;
+                painelNordeste.Visible = true;
+                painelCentroOeste.Visible = false;
+                painelSudeste.Visible = false;
+                painelSul.Visible = false;
+                imgRegioes.ImageUrl = "~/Imagens/regiãonordeste.png";
             }
-            else if (times == "Bahia")
+            else if (regioes == "Centro-Oeste")
             {
-                lblResultado.Text = "7° Colocado no Brasileirão";
-                imgTimes.ImageUrl = "imagens/bahia.jfif";
+                painelNorte.Visible = false;
+                painelNordeste.Visible = false;
+                painelCentroOeste.Visible = true;
+                painelSudeste.Visible = false;
+                painelSul.Visible = false;
+                imgRegioes.ImageUrl = "~/Imagens/regiãocentrooeste.png";
             }
-            else if (times == "Palmeiras")
+            else if (regioes == "Sudeste")
             {
-                lblResultado.Text = "3° Colocado no Brasileirão";
-                imgTimes.ImageUrl = "imagens/palmeiras.png";
+                painelNorte.Visible = false;
+                painelNordeste.Visible = false;
+                painelCentroOeste.Visible = false;
+                painelSudeste.Visible = true;
+                painelSul.Visible = false;
+                imgRegioes.ImageUrl = "~/Imagens/regiãosudeste.png";
             }
-            else if (times == "Botafogo")
+            else if (regioes == "Sul")
             {
-                lblResultado.Text = "2° Colocado no Brasileirão";
-                imgTimes.ImageUrl = "imagens/botafogo.jfif";
+                painelNorte.Visible = false;
+                painelNordeste.Visible = false;
+                painelCentroOeste.Visible = false;
+                painelSudeste.Visible = false;
+                painelSul.Visible = true;
+                imgRegioes.ImageUrl = "~/Imagens/regiãosul.png";
             }
         }
     }

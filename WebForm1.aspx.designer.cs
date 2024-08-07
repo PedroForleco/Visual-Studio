@@ -7,7 +7,7 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Arquivo___Projeto04__TimesDeFutebol
+namespace Arquivo_Projeto05__OBrasil_
 {
 
 
@@ -42,57 +42,120 @@ namespace Arquivo___Projeto04__TimesDeFutebol
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Controle dropTimes.
+        /// Controle Label3.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropTimes;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Controle btnExcutar.
+        /// Controle Label4.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExcutar;
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// Controle lblResultado.
+        /// Controle Label5.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblResultado;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// Controle imgTimes.
+        /// Controle Label6.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgTimes;
+        protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// Controle painel_norte.
+        /// Controle Image1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel painel_norte;
+        protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
-        /// Controle painel_nordeste.
+        /// Controle Label7.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel painel_nordeste;
+        protected global::System.Web.UI.WebControls.Label Label7;
+
+        /// <summary>
+        /// Controle dropRegioes.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropRegioes;
+
+        /// <summary>
+        /// Controle imgRegioes.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgRegioes;
+
+        /// <summary>
+        /// Controle painelNorte.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel painelNorte;
+
+        /// <summary>
+        /// Controle painelNordeste.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel painelNordeste;
+
+        /// <summary>
+        /// Controle painelCentroOeste.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel painelCentroOeste;
+
+        /// <summary>
+        /// Controle painelSudeste.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel painelSudeste;
+
+        /// <summary>
+        /// Controle painelSul.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel painelSul;
     }
 }
