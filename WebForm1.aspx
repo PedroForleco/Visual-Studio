@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Projeto02.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Arquivo___Projeto04__TimesDeFutebol.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -6,33 +6,56 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            color: #000000;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            Núm 1 :
-            <asp:TextBox ID="txtNum1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+        <div style="color: #00FF99">
+            <center>
+            <asp:Label ID="Label1" runat="server" Text="ESCOLHA UM TIME:" style="color: #0000FF; font-size: xx-large"></asp:Label>
+            </center>
             <br />
+            <CENTER>
+            <asp:Label ID="Label2" runat="server" Text="Opções:" style="color: #0000FF; font-size: x-large"></asp:Label>
+&nbsp;<asp:DropDownList ID="dropTimes" runat="server" AutoPostBack="True" OnSelectedIndexChanged="dropTimes_SelectedIndexChanged">
+                <asp:ListItem>[ESCOLHA]</asp:ListItem>
+                <asp:ListItem Value="Bahia">Bahia</asp:ListItem>
+                <asp:ListItem Value="Botafogo">Botafogo</asp:ListItem>
+                <asp:ListItem Value="Corinthians">Corinthians</asp:ListItem>
+                <asp:ListItem Value="Criciúma">Criciúma</asp:ListItem>
+                <asp:ListItem Value="Palmeiras">Palmeiras</asp:ListItem>
+            </asp:DropDownList>     
+            </CENTER>
             <br />
-            Núm 2 :
-            <asp:TextBox ID="txtNum2" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <asp:DropDownList ID="dropOperacao" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged2" Width="120px">
-                <asp:ListItem>( ESCOLHA )</asp:ListItem>
-                <asp:ListItem Value="+">Somar</asp:ListItem>
-                <asp:ListItem Value="-">Subtrair</asp:ListItem>
-                <asp:ListItem Value="*">Multiplicar</asp:ListItem>
-                <asp:ListItem Value="/">Dividir</asp:ListItem>
-            </asp:DropDownList>
-        &nbsp;<asp:Button ID="btnExecutar" runat="server" OnClick="btnExecutar_Click" Text="Executar" Width="90px" />
-            <br />
-            <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="LIMPAR" />
-            <br />
-            <br />
-            <br />
-            <asp:Label ID="lblResultado" runat="server" Width="160px"></asp:Label>
+            <center style="color: #000000">
+            <asp:Button ID="btnExcutar" runat="server" Text="EXECUTAR" OnClick="btnExcutar_Click" style="color: #FF0000; font-size: medium;" Height="50px" Width="120px" />
+                <br />
+                <br />
+                <asp:Label ID="lblResultado" runat="server" style="color: #000000; font-size: large"></asp:Label>
+                <br />
+                <br />
+                <asp:Image ID="imgTimes" runat="server" Height="300px" Width="300px" />
+                <br />
+                <br />
+                <asp:Panel ID="painel_norte" runat="server" style="background-color: #CCFF99" Visible="False">
+                    <span class="auto-style1">Norte
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    </span>
+                </asp:Panel>
+                <br />
+                <asp:Panel ID="painel_nordeste" runat="server" style="color: #FFCC66; background-color: #FF6600">
+                    <span class="auto-style1">Nordeste</span></asp:Panel>
+                <br />
+                <br />
+            </center>
         </div>
     </form>
 </body>

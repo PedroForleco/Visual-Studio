@@ -7,7 +7,7 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace Projeto02
+namespace Arquivo___Projeto04__TimesDeFutebol
 {
 
 
@@ -24,49 +24,40 @@ namespace Projeto02
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle txtNum1.
+        /// Controle Label1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNum1;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Controle txtNum2.
+        /// Controle Label2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNum2;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Controle dropOperacao.
+        /// Controle dropTimes.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropOperacao;
+        protected global::System.Web.UI.WebControls.DropDownList dropTimes;
 
         /// <summary>
-        /// Controle btnExecutar.
+        /// Controle btnExcutar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExecutar;
-
-        /// <summary>
-        /// Controle Button1.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnExcutar;
 
         /// <summary>
         /// Controle lblResultado.
@@ -76,5 +67,32 @@ namespace Projeto02
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblResultado;
+
+        /// <summary>
+        /// Controle imgTimes.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgTimes;
+
+        /// <summary>
+        /// Controle painel_norte.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel painel_norte;
+
+        /// <summary>
+        /// Controle painel_nordeste.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel painel_nordeste;
     }
 }

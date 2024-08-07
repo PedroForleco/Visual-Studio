@@ -5,69 +5,86 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Projeto02
+namespace Arquivo___Projeto04__TimesDeFutebol
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        private const string V = "corinthians";
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnExcutar_Click(object sender, EventArgs e)
         {
+            string times = dropTimes.SelectedValue.ToString();
 
-        }
-
-        protected void DropDownList1_SelectedIndexChanged2(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            txtNum1.Text = "";
-            txtNum2.Text = "";
-            lblResultado.Text = "";
-        }
-
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnExecutar_Click(object sender, EventArgs e)
-        {
-            if (dropOperacao.SelectedValue == "+")
+            if (times == "[ESCOLHA]")
             {
-                int numero1 = Convert.ToInt32(txtNum1.Text);
-                int numero2 = Convert.ToInt32(txtNum2.Text);
-                int soma = numero1 + numero2;
-                lblResultado.Text = soma.ToString();
+                lblResultado.Text = "";
+                imgTimes.ImageUrl = "imagens/paginabranco.png";
             }
-
-            else if (dropOperacao.SelectedValue == "-")
+            else if (times == "Corinthians")
             {
-                int numero1 = Convert.ToInt32(txtNum1.Text);
-                int numero2 = Convert.ToInt32(txtNum2.Text);
-                int soma = numero1 - numero2;
-                lblResultado.Text = soma.ToString();
+                lblResultado.Text = "15° Colocado no Brasileirão";
+                imgTimes.ImageUrl = "imagens/corinthians.jfif";
             }
-
-            else if (dropOperacao.SelectedValue == "*")
+            else if (times == "Criciúma")
             {
-                int numero1 = Convert.ToInt32(txtNum1.Text);
-                int numero2 = Convert.ToInt32(txtNum2.Text);
-                int soma = numero1 * numero2;
-                lblResultado.Text = soma.ToString();
+                lblResultado.Text = "12° Colocado no Brasileirão";
+                imgTimes.ImageUrl = "imagens/criciúma.jfif";
             }
-
-            else if (dropOperacao.SelectedValue == "/")
+            else if (times == "Bahia")
             {
-                int numero1 = Convert.ToInt32(txtNum1.Text);
-                int numero2 = Convert.ToInt32(txtNum2.Text);
-                int soma = numero1 / numero2;
-                lblResultado.Text = soma.ToString();
+                lblResultado.Text = "7° Colocado no Brasileirão";
+                imgTimes.ImageUrl = "imagens/bahia.jfif";
+            }
+            else if (times == "Palmeiras")
+            {
+                lblResultado.Text = "3° Colocado no Brasileirão";
+                imgTimes.ImageUrl = "imagens/palmeiras.png";
+            }
+            else if (times == "Botafogo")
+            {
+                lblResultado.Text = "2° Colocado no Brasileirão";
+                imgTimes.ImageUrl = "imagens/botafogo.jfif";
+            }
+        }
+
+        protected void dropTimes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string times = dropTimes.SelectedValue.ToString();
+
+            if (times == "[ESCOLHA]")
+            {
+                lblResultado.Text = "";
+                imgTimes.ImageUrl = "imagens/paginabranco.png";
+            }
+            else if (times == "Corinthians")
+            {
+                lblResultado.Text = "15° Colocado no Brasileirão";
+                imgTimes.ImageUrl = "imagens/corinthians.jfif";
+            }
+            else if (times == "Criciúma")
+            {
+                lblResultado.Text = "12° Colocado no Brasileirão";
+                imgTimes.ImageUrl = "imagens/criciúma.jfif";
+            }
+            else if (times == "Bahia")
+            {
+                lblResultado.Text = "7° Colocado no Brasileirão";
+                imgTimes.ImageUrl = "imagens/bahia.jfif";
+            }
+            else if (times == "Palmeiras")
+            {
+                lblResultado.Text = "3° Colocado no Brasileirão";
+                imgTimes.ImageUrl = "imagens/palmeiras.png";
+            }
+            else if (times == "Botafogo")
+            {
+                lblResultado.Text = "2° Colocado no Brasileirão";
+                imgTimes.ImageUrl = "imagens/botafogo.jfif";
             }
         }
     }
